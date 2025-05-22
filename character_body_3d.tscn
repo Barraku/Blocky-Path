@@ -34,4 +34,5 @@ animations = [{
 [node name="CharacterBody3D" type="CharacterBody3D"]
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014154, 0.00341487, 0.000442505)
 sprite_frames = SubResource("SpriteFrames_nl27k")
