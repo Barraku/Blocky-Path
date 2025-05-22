@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu1llqhog3gnb"]
+
+[ext_resource type="Texture2D" uid="uid://b4fq35dbblmu8" path="res://assets/KayKit_Skeletons_1.0_FREE/characters/gltf/Skeleton_Minion_skeleton_texture.png" id="1_iwpo4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fb3t6"]
+atlas = ExtResource("1_iwpo4")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vd578"]
+atlas = ExtResource("1_iwpo4")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7tqt"]
+atlas = ExtResource("1_iwpo4")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nl27k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fb3t6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vd578")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7tqt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nl27k")
