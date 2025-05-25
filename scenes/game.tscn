@@ -1,14 +1,28 @@
 [gd_scene load_steps=4 format=3 uid="uid://dqrdgh1pfk5sh"]
 
 [ext_resource type="Script" uid="uid://cjdw35x2npigx" path="res://scenes/game.gd" id="1_uwrxv"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://bwsudekukdqro" path="res://platform.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cu1llqhog3gnb" path="res://character_body_3d.tscn" id="3_lbhrr"]
+=======
+[ext_resource type="PackedScene" uid="uid://celpw01ocqkax" path="res://assets/MiniCharacters1-Kenny/Models/GLB format/wheelchair.glb" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://07y7te122aiv" path="res://assets/MiniCharacters1-Kenny/Models/GLB format/character-female-b.glb" id="3_lnu2h"]
+>>>>>>> 4f3f748c852f346097fca36c76d5314db9faa4a6
 
 [node name="Game" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00569487, 0, -0.00484586)
 script = ExtResource("1_uwrxv")
 
+<<<<<<< HEAD
 [node name="platform" parent="." instance=ExtResource("2_lnu2h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050087, 0.0446472, -0.0180168)
 
 [node name="CharacterBody3D" parent="platform" instance=ExtResource("3_lbhrr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.99098, 0)
+=======
+[node name="wheelchair2" parent="." instance=ExtResource("2_yqjtg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.372067, -0.0639167, -0.487176)
+
+[node name="character-female-b2" parent="." instance=ExtResource("3_lnu2h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0649, -0.177021, -0.328439)
+>>>>>>> 4f3f748c852f346097fca36c76d5314db9faa4a6
