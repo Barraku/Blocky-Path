@@ -1,17 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0kae8p25h5jp"]
+[gd_scene load_steps=2 format=3 uid="uid://crked32exeh6o"]
 
-[ext_resource type="Script" uid="uid://b1shqtspbrgqn" path="res://character.gd" id="1_iwpo4"]
+[sub_resource type="GDScript" id="GDScript_b2mh8"]
+script/source = "extends CharacterBody3D
+
+var gravity = ProjectSettings.get_setting(\"physics/3d/default_gravity\")
+var speed = 4.0 # movement speed
+var jump_speed = 6.0 #jump height
+var mouse_sensitivity = 0.002 #turning speed
+
+func get_input():
+	var input = Input.get_vector(\"strafe_left\", \"strafe_right\", \"move_forward\", \"move_back\")
+	velocity.x = input.x * speed
+	velocity.z = input.y * speed
+
+func _physics_process(delta):
+	velocity.y += -gravity * delta
+	get_input()
+	move_and_slide()
+"
 
 [node name="Character" type="CharacterBody3D"]
-script = ExtResource("1_iwpo4")
+script = SubResource("GDScript_b2mh8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
-radius = 0.2
-height = 0.500488
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0877643, 0.13391, -0.132972)
@@ -24,3 +35,11 @@ radius = 0.05
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.97237, 0.233445, 0, -0.233445, 0.97237, -0.0016814, 0.421823, 1.14295)
 fov = 54.2
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(1, -2.98023e-08, 0, 0, 1, 0, -1.49012e-08, 2.98023e-08, 1, 0, 0, 0)
+radius = 0.2
+height = 0.500488
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.889679, -0.277838, 0.362321, 0.456586, 0.541381, -0.706, 3.70677e-09, 0.793545, 0.608512, 0, 0.0274508, 0)
