@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0kae8p25h5jp"]
+
+[ext_resource type="Script" uid="uid://b1shqtspbrgqn" path="res://character.gd" id="1_iwpo4"]
+
+[node name="Character" type="CharacterBody3D"]
+script = ExtResource("1_iwpo4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+radius = 0.2
+height = 0.500488
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0877643, 0.13391, -0.132972)
+radius = 0.05
+
+[node name="CSGSphere3D2" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0904002, 0.13391, -0.132972)
+radius = 0.05
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.97237, 0.233445, 0, -0.233445, 0.97237, -0.0016814, 0.421823, 1.14295)
+fov = 54.2
