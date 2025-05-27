@@ -10,9 +10,9 @@ extends CharacterBody3D
 @onready var camera_pivot = $CameraPivot
 @onready var camera = $CameraPivot/Camera3D
 
-func _ready():
-	# Hide and capture mouse
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+#func _ready():
+	## Hide and capture mouse
+	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
 	# Mouse look for camera rotation
@@ -25,7 +25,7 @@ func _physics_process(delta):
 	# Handle movement
 	var input_dir = Input.get_vector("strafe_left", "strafe_right", "move_forward", "move_back")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y -= gravity * delta
