@@ -3,14 +3,15 @@
 [sub_resource type="BoxMesh" id="BoxMesh_148we"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_arobg"]
-size = Vector3(2.42346, 0.214783, 2.70923)
+size = Vector3(2.4422, 0.214783, 2.70923)
 
 [node name="StaticBody3D" type="StaticBody3D"]
+transform = Transform3D(5.58683, 0, 0, 0, 1, 0, 0, 0, 3.05011, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.4292, 0, 0, 0, 0.0642329, 0, 0, 0, 2.71734, 0, 0, 0)
 mesh = SubResource("BoxMesh_148we")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.300791, 0, 0, 0, 1, 0.00177002, -0.000592291, 0.00256348)
+transform = Transform3D(1, 0, 0, 0, 0.300791, 0, 0, 0, 1, -0.00759935, -0.000592291, 0.00256348)
 shape = SubResource("BoxShape3D_arobg")

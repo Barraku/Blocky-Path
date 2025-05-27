@@ -11,7 +11,7 @@
 [node name="CharacterBody3D" parent="." instance=ExtResource("2_sqych")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
-
 [node name="Pause" parent="." instance=ExtResource("3_srgey")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.563555, 0.826079, 0, -0.826079, 0.563555, 0.310796, 6.43365, 25.3071)

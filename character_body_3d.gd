@@ -10,10 +10,6 @@ extends CharacterBody3D
 @onready var camera_pivot = $CameraPivot
 @onready var camera = $CameraPivot/Camera3D
 
-#func _ready():
-	## Hide and capture mouse
-	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
 func _input(event):
 	# Mouse look for camera rotation
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
