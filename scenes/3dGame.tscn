@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cerer1dbsxwp1"]
+[gd_scene load_steps=4 format=3 uid="uid://cerer1dbsxwp1"]
 
 [ext_resource type="PackedScene" uid="uid://camehvtccg75h" path="res://scenes/staticplatform3d.tscn" id="1_wua2w"]
 [ext_resource type="PackedScene" uid="uid://k1v5atr3hvod" path="res://scenes/3dPlayerCapsule.tscn" id="2_sqych"]
+[ext_resource type="PackedScene" uid="uid://72cnpwu1rr0v" path="res://scenes/pause.tscn" id="3_srgey"]
 
 [node name="game" type="Node3D"]
 
@@ -12,3 +13,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+
+[node name="Pause" parent="." instance=ExtResource("3_srgey")]
