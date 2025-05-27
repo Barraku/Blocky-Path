@@ -1,21 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://k1v5atr3hvod"]
 
 [ext_resource type="Script" uid="uid://cbiqpjyn3w0uv" path="res://character_body_3d.gd" id="1_ajqk2"]
+[ext_resource type="PackedScene" uid="uid://d36oib36eqpe1" path="res://assets/KayKit_Adventurers_1.0_FREE/Characters/gltf/Barbarian.glb" id="2_6yysn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6yysn"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_itn0u"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_ajqk2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.990892, 0, 0, 0, 0.990892, 0, 0, 0, 0.990892, 0, 0, 0)
+transform = Transform3D(0.734889, 0, 0, 0, 0.994145, 0, 0, 0, 0.990892, 0.0205246, 0.973843, -0.0640942)
 shape = SubResource("CapsuleShape3D_6yysn")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.00386, 0, 0, 0, 1.00386, 0, 0, 0, 1.00386, 0, 0, 0)
-mesh = SubResource("CapsuleMesh_itn0u")
+[node name="Barbarian" parent="." instance=ExtResource("2_6yysn")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="CameraPivot" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.656217, 0)
