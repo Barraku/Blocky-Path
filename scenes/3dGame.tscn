@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://cerer1dbsxwp1"]
+[gd_scene load_steps=5 format=3 uid="uid://cerer1dbsxwp1"]
 
 [ext_resource type="PackedScene" uid="uid://camehvtccg75h" path="res://scenes/staticplatform3d.tscn" id="1_wua2w"]
 [ext_resource type="PackedScene" uid="uid://k1v5atr3hvod" path="res://scenes/3dPlayerCapsule.tscn" id="2_sqych"]
 [ext_resource type="PackedScene" uid="uid://72cnpwu1rr0v" path="res://scenes/pause.tscn" id="3_srgey"]
+
+[sub_resource type="Environment" id="Environment_srgey"]
+background_mode = 1
+ambient_light_color = Color(0.909953, 0.967396, 0.996016, 1)
+ambient_light_energy = 0.01
+tonemap_mode = 3
 
 [node name="game" type="Node3D"]
 
@@ -14,4 +20,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 [node name="Pause" parent="." instance=ExtResource("3_srgey")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.563555, 0.826079, 0, -0.826079, 0.563555, 0.310796, 6.43365, 25.3071)
+transform = Transform3D(1, 0, 0, 0, 0.679595, 0.733588, 0, -0.733588, 0.679595, 0.79384, 7.0713, 22.4452)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_srgey")
